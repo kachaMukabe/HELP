@@ -1,11 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={this.onPress}
+        >
+          <Text style={{color: 'white', fontSize: 24}}>PANIC!</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -17,5 +22,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  button: {
+    borderWidth:1,
+    borderColor:'rgba(0,0,0,0.2)',
+    alignItems:'center',
+    justifyContent:'center',
+    width:200,
+    height:200,
+    backgroundColor:'#d41515',
+    borderRadius:100,
   },
 });
