@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Platform } from 'react-native';
+import { StyleSheet, Text, View, Platform, Button } from 'react-native';
 import { Constants, Location, Permissions } from 'expo';
 
 export default class App extends React.Component {
@@ -35,6 +35,17 @@ export default class App extends React.Component {
     this.setState({ location });
   };
 
+  sendLocation = async () => {
+    let { status } = await Permissions.askAsync(Permissions.SMS)
+    const isAvailable = await Expo.SMS.isAvailableAsync();
+    if (isAvailable) {
+      const { result } = await Expo.SMS.sendSMSAsync(['0978006736','0972111456'], this.state.location);
+      console.log(result)
+    } else {
+      // misfortune... there's no SMS available on this device
+    }
+  }
+
   render() {
     let text = 'Waiting..';
     if (this.state.errorMessage) {
@@ -45,6 +56,9 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.paragraph}>{text}</Text>
+        <Button title="Send Location" onPress={
+          ()=> this.sendLocation()
+        }/>
       </View>
     );
   }
