@@ -18,11 +18,7 @@ export default class Number extends React.Component {
         <Text style={{padding: 10, fontSize: 42}}>
           {this.state.text.split(' ').map((word) => word).join(' ')}
         </Text>
-        <TouchableOpacity
-          // onPress={this.onPress} <-- On press, login to the app
-        >
-          <Text style={{color: 'white', fontSize: 24}}>Enter</Text>
-        </TouchableOpacity>
+        <Button>Enter</Button>
       </View>
     );
   }
