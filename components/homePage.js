@@ -5,6 +5,9 @@ export default class Home extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.menu}>
+          <Text>Menu</Text>
+        </View>
         <TouchableOpacity
           style={styles.button}
           // onPress={this.onPress}
@@ -33,4 +36,8 @@ const styles = StyleSheet.create({
     backgroundColor:'#d41515',
     borderRadius:100,
   },
+  menu: {
+    alignItems: 'flex-end',
+    justifyContent: 'flex-start'
+  }
 });
