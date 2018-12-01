@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
 export default class Home extends React.Component {
+  static navigationOptions = {
+    header: null,
+    };
   render() {
     return (
       <View style={styles.container}>
