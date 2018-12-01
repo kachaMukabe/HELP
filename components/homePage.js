@@ -54,6 +54,9 @@ export default class Home extends React.Component {
       console.log("err"+err);
     });
   }
+  static navigationOptions = {
+    header: null,
+    };
   render() {
     return (
       <View style={styles.container}>
