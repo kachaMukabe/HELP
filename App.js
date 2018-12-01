@@ -2,6 +2,7 @@ import React from "react";
 import { Overlay, ThemeProvider } from "react-native-elements";
 import { StyleSheet, Text, View } from "react-native";
 import Forum from "./components/forum";
+import ListItem from "./components/forum_list_item";
 
 export default class App extends React.Component {
   render() {

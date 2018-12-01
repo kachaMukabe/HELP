@@ -1,23 +1,37 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import ForumListItem from "./forum_list_item";
 
 export default class Forum extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text
-          style={{
-            padding: 20,
-            marginTop: 50,
-            backgroundColor: "blue",
-            color: "white",
-            flexDirection: "row",
-            width: "100%"
-          }}
+      <ScrollView style={styles.container}>
+        <View
+          style={
+            {
+              // flex: 1,
+            }
+          }
         >
-          FORUM
-        </Text>
-      </View>
+          <Text
+            style={{
+              marginTop: 40,
+              color: "#2699fb",
+              width: "100%",
+              fontSize: 20,
+              height: 50,
+              textAlign: "center",
+              textAlignVertical: "center",
+              elevation: 1
+            }}
+          >
+            FORUM
+          </Text>
+        </View>
+        <ForumListItem />
+        <ForumListItem />
+        <ForumListItem />
+      </ScrollView>
     );
   }
 }
