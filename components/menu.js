@@ -5,15 +5,13 @@ export default class Menu extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity
-          // onPress={this.onPress}
-        >
-          <Text style={{color: 'white', fontSize: 24}}>Add Contacts</Text>
+        <TouchableOpacity>
+          <Text style={{fontSize: 24}}> Add Contacts</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          // onPress={this.onPress}
+          onPress={() => this.props.navigation.navigate('Forum')}
         >
-          <Text style={{color: 'white', fontSize: 24}}>Forum</Text>
+          <Text style={{fontSize: 24}}> Go to the Forum</Text>
         </TouchableOpacity>
       </View>
     );
@@ -24,7 +22,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start'
   },
 });
