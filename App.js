@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import Forum from "./components/forum";
 import Home from './components/homePage';
 import Number from './components/yourNumber';
+import ListItem from "./components/forum_list_item";
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 
 export default class App extends React.Component {
